@@ -3,7 +3,7 @@ import get from 'lodash/get';
 import Link from 'gatsby-link';
 import Menu from '../Menu';
 import Links from '../Links';
-import profilePic from '../../pages/photo.jpg';
+import logo from '../../assets/images/goat-balance.svg';
 import './style.scss';
 
 class Sidebar extends React.Component {
@@ -17,22 +17,14 @@ class Sidebar extends React.Component {
       <div>
         <Link to="/">
           <img
-            src={profilePic}
+            src={logo}
             className="sidebar__author-photo"
             width="75"
             height="75"
-            alt={author.name}
+            alt={'Balance Board Logo'}
           />
         </Link>
-        { isHomePage ? (
-          <h1 className="sidebar__author-title">
-            <Link className="sidebar__author-title-link" to="/">{author.name}</Link>
-          </h1>
-        ) :
-          <h2 className="sidebar__author-title">
-            <Link className="sidebar__author-title-link" to="/">{author.name}</Link>
-          </h2>
-        }
+
         <p className="sidebar__author-subtitle">{subtitle}</p>
       </div>
     );
@@ -47,9 +39,6 @@ class Sidebar extends React.Component {
           <div>
             <Menu data={menu} />
             <Links data={author} />
-            <p className="sidebar__copyright">
-              {copyright}
-            </p>
           </div>
         </div>
       </div>

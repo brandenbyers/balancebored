@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
-    url: 'https://lumen.netlify.com',
-    title: 'Blog by John Doe',
-    subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
-    copyright: '© All rights reserved.',
+    url: 'https://www.balancebored.com',
+    title: 'Balance Bored',
+    subtitle: 'Balance Bored is your source for all things balance. Mostly boards, wheels, and standing desks.',
     disqusShortname: '',
     menu: [
       {
@@ -11,22 +10,21 @@ module.exports = {
         path: '/'
       },
       {
-        label: 'About me',
+        label: 'About',
         path: '/about/'
       },
       {
-        label: 'Contact me',
+        label: 'Contact',
         path: '/contact/'
       }
     ],
     author: {
-      name: 'John Doe',
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
+      name: 'Branden Byers',
+      email: 'branden@balancebored.com',
+      twitter: 'balancebored',
+      instagram: 'balancebored',
+      youtube: 'UCmQ2reXk-vPx9AXeyaIj0Og',
       rss: '#',
-      vk: '#'
     }
   },
   plugins: [

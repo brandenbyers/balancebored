@@ -10,7 +10,7 @@ class TagTemplate extends React.Component {
 
     return (
       <div>
-        <Helmet title={`All Posts tagged as "${tag}" - ${title}`} />
+        <Helmet title={`All articles tagged as "${tag}" - ${title}`} />
         <Sidebar {...this.props} />
         <TagTemplateDetails {...this.props} />
       </div>
@@ -26,19 +26,16 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         subtitle
-        copyright
         menu {
           label
           path
         }
         author {
           name
-          email
-          telegram
           twitter
-          github
+          instagram
+          youtube
           rss
-          vk
         }
       }
     }

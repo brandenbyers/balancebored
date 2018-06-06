@@ -29,7 +29,6 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         subtitle
-        copyright
         author {
           name
           twitter

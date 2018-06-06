@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import moment from 'moment';
-import Disqus from '../Disqus/Disqus';
+import logo from '../../assets/images/goat-balance.svg';
 import './style.scss';
 
 class PostTemplateDetails extends React.Component {
@@ -12,7 +12,15 @@ class PostTemplateDetails extends React.Component {
 
     const homeBlock = (
       <div>
-        <Link className="post-single__home-button" to="/">All Articles</Link>
+        <Link to="/">
+          <img
+            src={logo}
+            className="post-single__home-button"
+            width="75"
+            height="75"
+            alt={'Balance Board Logo'}
+          />
+        </Link>
       </div>
     );
 
@@ -30,12 +38,6 @@ class PostTemplateDetails extends React.Component {
       </div>
     );
 
-    const commentsBlock = (
-      <div>
-        <Disqus postNode={post} siteMetadata={this.props.data.site.siteMetadata} />
-      </div>
-    );
-
     return (
       <div>
         {homeBlock}
@@ -44,7 +46,7 @@ class PostTemplateDetails extends React.Component {
             <h1 className="post-single__title">{post.frontmatter.title}</h1>
             <div className="post-single__body" dangerouslySetInnerHTML={{ __html: post.html }} />
             <div className="post-single__date">
-              <em>Published {moment(post.frontmatter.date).format('D MMM YYYY')}</em>
+              <em>Published on {moment(post.frontmatter.date).format('MMMM Do, YYYY')}.</em>
             </div>
           </div>
           <div className="post-single__footer">
@@ -52,11 +54,7 @@ class PostTemplateDetails extends React.Component {
             <hr />
             <p className="post-single__footer-text">
               {subtitle}
-              <a href={`https://twitter.com/${author.twitter}`} target="_blank" rel="noopener noreferrer">
-                <br /> <strong>{author.name}</strong> on Twitter
-              </a>
             </p>
-            {commentsBlock}
           </div>
         </div>
       </div>

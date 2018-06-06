@@ -1,17 +1,16 @@
 import React from 'react';
 import './style.scss';
-import '../../assets/fonts/fontello-771c82e0/css/fontello.css';
+import '../../assets/fonts/fontello-a84af556/css/fontello.css';
 
 class Links extends React.Component {
   render() {
     const author = this.props.data;
     const links = {
-      telegram: author.telegram,
       twitter: author.twitter,
-      github: author.github,
-      vk: author.vk,
-      rss: author.rss,
-      email: author.email
+      instagram: author.instagram,
+      youtube: author.youtube,
+      linkedin: author.linkedin,
+      rss: author.rss
     };
 
     return (
@@ -23,31 +22,17 @@ class Links extends React.Component {
             </a>
           </li>
           <li className="links__list-item">
-            <a href={`https://www.github.com/${links.github}`} target="_blank" >
-              <i className="icon-github" />
+            <a href={`https://www.instagram.com/${links.instagram}`} target="_blank" >
+              <i className="icon-instagram" />
             </a>
           </li>
           <li className="links__list-item">
-            <a href={`https://www.vk.com/${links.vk}`} target="_blank" >
-              <i className="icon-vkontakte" />
-            </a>
-          </li>
-        </ul>
-        <ul className="links__list">
-          <li className="links__list-item">
-            <a href={`mailto:${links.email}`}>
-              <i className="icon-mail" />
+            <a href={`https://www.youtube.com/channel/${links.youtube}`} target="_blank" >
+              <i className="icon-youtube" />
             </a>
           </li>
           <li className="links__list-item">
-            <a href={`telegram:${links.telegram}`}>
-              <i className="icon-paper-plane" />
-            </a>
-          </li>
-        </ul>
-        <ul className="links__list">
-          <li className="links__list-item">
-            <a href={links.rss}>
+            <a href={links.rss} target="_blank" >
               <i className="icon-rss" />
             </a>
           </li>
