@@ -24,7 +24,7 @@ module.exports = {
       twitter: 'balancebored',
       instagram: 'balancebored',
       youtube: 'UCmQ2reXk-vPx9AXeyaIj0Og',
-      rss: '#',
+      rss: '/rss.xml',
     }
   },
   plugins: [
